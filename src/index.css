@@ -1,0 +1,20 @@
+@import '/node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  background: #242731;
+  font-family: 'Gilroy-Regular', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+ul {
+  list-style: none;
+}
+p {
+  margin: 0;
+}
