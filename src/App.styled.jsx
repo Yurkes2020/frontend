@@ -66,17 +66,18 @@ export const Svg = styled.img`
 export const Main = styled.main`
   text-align: center;
   padding: 0 16px 20px;
+  height: 100%;
   @media screen and (min-width: 480px) {
     padding: 0 0 0 257px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 270px auto;
+    grid-template-rows: 300px auto;
   }
 `;
 
 export const Wrapper = styled.div`
   @media screen and (min-width: 480px) {
-    margin-right: 250px;
+    margin-right: calc(100% - 356px);
     text-align: left;
   }
 `;
@@ -136,6 +137,7 @@ export const TextSkil = styled.p`
   font-size: 14px;
   @media screen and (min-width: 480px) {
     text-align: left;
+    padding: 0;
   }
 `;
 
@@ -186,6 +188,7 @@ export const TextRed = styled.span`
 
 export const Input = styled.input`
   background-color: #272d3d;
+  color: #ffffff;
   padding: 12px 0 12px 27px;
   border-radius: 5px;
   font-size: 12px;
@@ -219,6 +222,7 @@ export const Button = styled.button`
   border: none;
   @media screen and (min-width: 480px) {
     width: 248px;
+    background-color: #ff3459;
   }
 `;
 
@@ -286,4 +290,13 @@ export const BonusBlue = styled.span`
   margin-right: 5px;
   margin-left: 5px;
   font-size: 14px;
+`;
+
+export const Footer = styled.p`
+  margin-top: 40px;
+  font-weight: 800;
+  font-size: 8vw;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.05);
 `;

@@ -30,6 +30,7 @@ import {
   Bonus,
   BonusBlue,
   WrapCont,
+  Footer,
 } from './App.styled';
 import logo from './images/logo.png';
 import cal from './images/cal.svg';
@@ -113,6 +114,9 @@ const App = () => {
           </Wrap>
         </WrapCont>
       </Main>
+      <footer>
+        <Footer>FRONT-END DEVELOPER</Footer>
+      </footer>
     </div>
   );
 };
