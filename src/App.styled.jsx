@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 
 export const Header = styled.header`
-  padding: 28px 16px 32px 30px;
+  padding: 28px 0 32px 0;
+  padding-left: calc(20% - 52px);
+  padding-right: calc(20% - 52px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,6 +59,10 @@ export const Item = styled.li`
   border-radius: 6px;
   font-weight: 600;
   font-size: 11px;
+  @media screen and (min-width: 480px) {
+    width: 141px;
+    padding: 13px 30px;
+  }
 `;
 
 export const Svg = styled.img`
@@ -64,20 +70,21 @@ export const Svg = styled.img`
 `;
 
 export const Main = styled.main`
+  position: relative;
   text-align: center;
   padding: 0 16px 20px;
   height: 100%;
   @media screen and (min-width: 480px) {
-    padding: 0 0 0 257px;
+    padding-left: 257px;
+    padding-right: 257px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 300px auto;
   }
 `;
 
 export const Wrapper = styled.div`
   @media screen and (min-width: 480px) {
-    margin-right: calc(100% - 356px);
     text-align: left;
   }
 `;
@@ -138,6 +145,7 @@ export const TextSkil = styled.p`
   @media screen and (min-width: 480px) {
     text-align: left;
     padding: 0;
+    padding-right: 50px;
   }
 `;
 
@@ -210,6 +218,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  cursor: pointer;
   margin: 0 auto 18px;
   padding: 12px 0;
   font-weight: 700;
@@ -250,7 +259,8 @@ export const Wrap = styled.div`
     margin-bottom: 22px;
   }
   @media screen and (min-width: 480px) {
-    padding: 0 250px 0 0;
+    padding: 0;
+    padding-right: 10px;
     margin: 0;
     :last-child {
       margin-bottom: 22px;
@@ -260,11 +270,15 @@ export const Wrap = styled.div`
 
 export const WrapCont = styled.div`
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  @media screen and (min-width: 480px) {
+    padding-right: 42px;
+    flex-direction: column-reverse;
+  }
 `;
 
 export const TextFinish = styled.p`
-  display: block;
+  display: inline-block;
   margin-left: 16px;
   font-weight: 400;
   font-size: 12px;
@@ -278,7 +292,8 @@ export const Bonus = styled.span`
   margin-right: 5px;
 `;
 
-export const Name = styled.p`
+export const Name = styled.span`
+  display: block;
   font-weight: 700;
   font-size: 14px;
   margin-right: 5px;
@@ -293,10 +308,90 @@ export const BonusBlue = styled.span`
 `;
 
 export const Footer = styled.p`
-  margin-top: 40px;
-  font-weight: 800;
-  font-size: 8vw;
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgba(255, 255, 255, 0.05);
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-style: normal;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 800;
+    font-size: 8vw;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.05);
+  }
+`;
+
+export const Skills = styled.div`
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 0;
+    height: 0;
+  }
+`;
+export const Html = styled.img`
+  position: absolute;
+  top: 31px;
+  right: 56px;
+`;
+
+export const Css = styled.img`
+  position: absolute;
+  top: 120px;
+  right: 142px;
+`;
+export const Js = styled.img`
+  position: absolute;
+  top: 181px;
+  right: 64px;
+`;
+export const Sub = styled.img`
+  position: absolute;
+  top: 260px;
+  right: 140px;
+`;
+export const Vs = styled.img`
+  position: absolute;
+  top: 310px;
+  right: 72px;
+`;
+
+export const Dot = styled.span`
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #f16529;
+  border-radius: 50%;
+  top: 47px;
+  right: 48px;
+  :nth-of-type(2) {
+    width: 5px;
+    height: 5px;
+    top: 118px;
+    right: 144px;
+    background: #2965f1;
+  }
+  :nth-of-type(3) {
+    width: 6px;
+    height: 6px;
+    top: 192px;
+    right: 51px;
+    background: #f0be25;
+  }
+  :nth-of-type(4) {
+    width: 5px;
+    height: 5px;
+    top: 247px;
+    right: 140px;
+    background: #ff9800;
+  }
+  :nth-of-type(5) {
+    width: 5px;
+    height: 5px;
+    top: 359px;
+    right: 64px;
+    background: #48aef3;
+  }
 `;
